@@ -1,13 +1,19 @@
 package pl.sda.javalondek4springdemo.model;
 
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Book {
 
     private Long id ;
+    @JsonProperty("autor")
     private String author;
+    @JsonProperty("tytul")
     private String title;
 
     public Book(Long id, String author, String title) {
         this.id = id;
+
         this.author = author;
         this.title = title;
     }
